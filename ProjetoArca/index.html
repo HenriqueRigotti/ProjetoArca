@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Arca</title>
+    <link rel="stylesheet" href="inicio.css">
+</head>
+
+<body>
+
+    <!-- navbar --> 
+    <header class="navbar">
+
+        <nav class="menu" id="menuNav">
+            <h1>❤️ ARCA</h1>
+            <ul>
+                <li><a href="castracao.html">Castração</a></li>
+                <li><a href="adocao.html">Adotar</a></li>
+                <li><a href="resgate.html">Resgate</a></li>
+                <li><a href="denuncia.html">Denúncia</a></li>
+            </ul>
+        </nav>
+        <button class="hamburger" onclick="toggleHamburger()" aria-label="Menu">☰</button>
+
+        <!-- AREA DO USUARIO -->
+        <div class="usuario-area">
+            <div class="user" onclick="toggleMenu()">👤</div>
+
+            <div class="menu-usuario" id="menuUsuario">
+                <a href="login.html">
+                    <div class="item">Entrar</div>
+                </a>
+                <a href="contato.html">
+                    <div class="item">Contate-nos</div>
+                </a>
+                <a href="agendamento.html">
+                    <div class="item">Agendamentos</div>
+                </a>
+                <a href="processo.html">
+                    <div class="item">Processos</div>
+                </a>
+                <a href="suporte.html">
+                    <div class="item">Suporte</div>
+                </a>
+            </div>
+        </div>
+
+    </header>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleHamburger() {
+            var menu = document.getElementById('menuNav');
+            menu.classList.toggle('aberto');
+        }
+    </script>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>TRANSFORME VIDAS <br> ATRAVÉS DA ADOÇÃO</h1>
+            <p>
+                Conectamos animais que precisam de um lar com pessoas que
+                querem fazer a diferença. Juntos, podemos criar um mundo mais
+                compassivo.
+            </p>
+            <div class="buttons">
+                <a href="adocao.html"> <button><strong>Quero Adotar</strong></button></a>
+                <a href="resgate.html"> <button class="botao">Solicitar Resgate</button></a>
+            </div>
+        </div>
+        <img src="fotoinicioarca.png">
+
+
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="serviços">
+        <h2>COMO PODEMOS AJUDAR?</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>ADOÇÃO</h3>
+                <p>Encontre seu novo melhor amigo e dê um lar cheio de amor</p>
+            </div>
+
+            <div class="card">
+                <h3>RESGATE</h3>
+                <p>Solicite resgate e nos ajude destina-lo a um novo lar que irá acolhê-lo melhor</p>
+            </div>
+
+            <div class="card">
+                <h3>DENÚNCIA</h3>
+                <p>Denuncie casos de maus-tratos e abandono animal para destinalo a um local seguro</p>
+            </div>
+
+            <div class="card">
+                <h3>CASTRAÇÃO</h3>
+                <p>Agende castração gratuita ou com desconto</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NÚMEROS -->
+    <section class="numeros">
+        <div>
+            <h2>3,400+</h2>
+            <p>Animais acolhidos</p>
+        </div>
+        <div>
+            <h2>XXX+</h2>
+            <p>Animais adotados</p>
+        </div>
+        <div>
+            <h2>2.100+</h2>
+            <p>Vagas para castrações</p>
+        </div>
+    </section>
+    <hr>
+    <!-- CTA -->
+    <section class="cadastro">
+        <h2>Faça parte dessa mudança</h2>
+        <p>
+            Cada ação conta. Seja adotando, denunciando maus-tratos ou ajudando em um resgate.
+        </p>
+        <a href="cadastro.html">
+            <button>Cadastre-se agora</button>
+        </a>
+    </section>
+
+
+</body>
+
+</html>

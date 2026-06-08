@@ -1,0 +1,312 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #F9FAFB;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 2px solid #000;
+  background: #F9FAFB;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-usuario a {
+     text-decoration: none; /* tira sublinhado */
+  color: inherit; /* mantém cor normal */
+}
+
+.menu a {
+  text-decoration: none;
+  background: #EBEBEB;
+  padding: 10px 20px;
+  border-radius: 12px;
+  color: #e60076;
+  font-weight: 500;
+  color:#e60076;
+  font-size: 13px;
+}
+
+.menu a.ativo {
+  background: #e60076;
+  color: #fff;
+}
+
+.usuario-area {
+    position: relative;
+}
+
+.user {
+    cursor: pointer;
+    
+}
+
+/* MENU SUSPENSO */
+.menu-usuario {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 170px;
+    font-size: 13px;
+    background: #eee;
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: 0.25s;
+}
+
+.menu-usuario.ativo {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* ITENS */
+.item {
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.item:hover {
+    background: #E60076;
+    color: #fff;}
+
+
+.user {
+  font-size: 26px;
+  padding: 2px 8px;
+}
+
+/* FORMULÁRIO PRINCIPAL */
+.formulario {
+  width: 850px;
+  margin: 40px auto;
+  border: 1px solid #000;
+  padding: 35px;
+  background: #ffffff;
+}
+
+.titulo-secao h3 {
+  font-size: 22px;
+  margin-bottom: 3px;
+}
+
+.sub {
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 25px;
+}
+
+/* LINHAS E CAMPOS */
+.campo {
+  margin-bottom: 20px;
+}
+
+.linha-dupla {
+  display: flex;
+  gap: 20px;
+}
+
+.flex-3 {
+  flex: 3;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.formulario label {
+  display: block;
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.formulario select, 
+.formulario input[type="text"] {
+  width: 100%;
+  height: 38px;
+  background: #dcdcdc;
+  border: none;
+  padding: 5px 10px;
+  font-size: 15px;
+  color: #555;
+}
+
+.formulario select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 18px;
+}
+
+.formulario textarea {
+  width: 100%;
+  height: 110px;
+  background: #dcdcdc;
+  border: none;
+  padding: 15px;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  resize: none;
+}
+
+.formulario textarea::placeholder {
+  color: #777;
+}
+
+/* COMPONENTE DE UPLOAD */
+.upload-container {
+  display: flex;
+  align-items: center;
+}
+
+.btn-upload {
+  background: #bebebe;
+  border: none;
+  padding: 10px 20px;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.texto-upload {
+  margin-left: 15px;
+  color: #000;
+  font-size: 16px;
+}
+
+.legenda-upload {
+  font-size: 14px;
+  color: #555;
+  margin-top: 8px;
+}
+
+/* CHECKBOX PERSONALIZADO */
+.campo-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+/* BOTÕES */
+.botoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.cancelar {
+  background: #D9D9D9;
+  color: #000;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.enviar {
+  background: #14B811;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* =============================================
+   RESPONSIVIDADE MOBILE — NÃO ALTERA DESKTOP
+   ============================================= */
+
+.hamburger-navbar {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding: 10px 14px;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        order: 3;
+        width: 100%;
+        gap: 6px;
+        margin-top: 8px;
+    }
+
+    .menu.aberto {
+        display: flex;
+    }
+
+    .hamburger-navbar {
+        display: block;
+        order: 2;
+        margin-left: auto;
+    }
+
+    .usuario-area {
+        order: 2;
+    }
+
+    .formulario {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .linha-dupla {
+        flex-direction: column;
+    }
+
+    .botoes {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+}

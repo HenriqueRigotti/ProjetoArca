@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Agendamentos - ARCA</title>
+  <link rel="stylesheet" href="agendamento.css">
+</head>
+
+<body>
+
+<div class="topo">
+      <div class="logo"> 
+      <a href="index.html"> <strong>❤️ ARCA</strong> </a>
+  </div>
+
+  <div class="menu" id="menuNavAgendamento">
+    <a href="castracao.html"> <button >Castração</button></a>
+    <a href="adocao.html"> <button>Adotar</button></a>
+    <a href="resgate.html"> <button>Resgate</button></a>
+    <a href="denuncia.html"> <button>Denúncia</button></a>
+  </div>
+  <button class="hamburger-topo" onclick="toggleHamburgerTopo()" aria-label="Menu">☰</button>
+
+  
+  <div class="usuario-area">
+          <div class="user" onclick="toggleMenu()">👤</div>
+
+          <div class="menu-usuario" id="menuUsuario">
+              <a href="login.html"> <div class="item">Entrar</div></a>
+          <a href="contato.html">  <div class="item">Contate-nos</div></a>
+          <a href="agendamento.html">   <div class="item">Agendamentos</div></a>
+          <a href="processo.html">  <div class="item">Processos</div></a>
+          <a href="suporte.html" > <div class="item">Suporte</div></a>
+          </div>
+      </div>
+  </div>
+  <script src="script.js"></script>
+<script>
+function toggleHamburgerTopo() {
+    var menu = document.getElementById('menuNavAgendamento');
+    menu.classList.toggle('aberto');
+}
+</script>
+
+
+<main>
+
+  <div class="container-agendamentos">
+    
+    <h2>Agendamentos</h2>
+
+    <div class="card-pedido">
+      <div class="info-pedido">
+        <h3>Pedido: 12345</h3>
+        <p>Tipo de agendamento: Castração</p>
+        <p>Animal: cachorro</p>
+        <p>Data: DD / MM / YYYY</p>
+        <p>Hora: 10:00</p>
+        <p>Nome do animal: Margot</p>
+      </div>
+      <div class="status-acao">
+        <span class="status">Confirmado</span>
+        <button class="btn-cancelar">Cancelar</button>
+      </div>
+    </div>
+
+    <div class="card-pedido">
+      <div class="info-pedido">
+        <h3>Pedido: 67890</h3>
+        <p>Tipo de agendamento: Castração</p>
+        <p>Animal: gato</p>
+        <p>Data: DD / MM / YYYY</p>
+        <p>Hora: 14:30</p>
+        <p>Nome do animal: Ringo</p>
+      </div>
+      <div class="status-acao">
+        <span class="status">Pendente</span>
+        <button class="btn-cancelar">Cancelar</button>
+      </div>
+    </div>
+
+    <div class="card-pedido">
+      <div class="info-pedido">
+        <h3>Pedido: 11223</h3>
+        <p>Tipo de agendamento: Visita para adoção</p>
+        <p>Animal: gato</p>
+        <p>Data: DD / MM / YYYY</p>
+        <p>Hora: 09:00</p>
+        <p>Nome do animal: Ralph</p>
+      </div>
+      <div class="status-acao">
+        <span class="status">Confirmado</span>
+        <button class="btn-cancelar">Cancelar</button>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+</body>
+</html>

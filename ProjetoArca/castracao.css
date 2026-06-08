@@ -1,0 +1,270 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F9FAFB;
+    margin: 0;
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+  padding: 16px 30px;
+  background: #F9FAFB;
+  font-size: 25px;
+}
+
+.logo{
+    font-size: 32px;
+}
+
+.topo a {
+  text-decoration: none; /* tira sublinhado */
+  color: inherit; /* mantém cor normal */
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+
+.menu button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #EBEBEB;
+  cursor: pointer;
+  color: #E60076;
+}
+
+.menu .ativo {
+  background: #E60076;
+  color: white;
+}
+
+.usuario-area {
+    position: relative;
+}
+
+.user {
+    cursor: pointer;
+    font-size: 22px;
+}
+
+/* MENU SUSPENSO */
+.menu-usuario {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 170px;
+    font-size: 13px;
+    background: #eee;
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: 0.25s;
+}
+
+.menu-usuario.ativo {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* ITENS */
+.item {
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.item:hover {
+    background: #E60076;
+    color: #fff;}
+
+
+.container {
+    width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+header {
+    text-align: center;
+}
+
+header .icon {
+    font-size: 30px;
+}
+
+header h1 {
+    margin: 10px 0 5px;
+}
+
+header p {
+    color: #555;
+}
+
+.info-box {
+    border: 1px solid #ccc;
+    margin: 20px 0;
+    background: #fafafa;
+    width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.info-box ul {
+    margin: 5px 0 0;
+    padding-left: 20px;
+    
+}
+
+.imput {
+    color: #D9D9D9;
+}
+
+.form-section h2 {
+    margin-bottom: 5px;
+}
+
+.form-section p {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    
+}
+
+.form-grid div {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.full {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+select,
+textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+
+textarea {
+    height: 80px;
+}
+
+.checkbox-group {
+    margin-top: 15px;
+    
+}
+
+.checkbox-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.cancelar {
+    background: #D9D9D9;
+    color:#000000
+}
+
+.proximo {
+    background: #000000;
+}
+
+/* =============================================
+   RESPONSIVIDADE MOBILE — NÃO ALTERA DESKTOP
+   ============================================= */
+
+.hamburger-topo {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .topo {
+        flex-wrap: wrap;
+        padding: 10px 14px;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        order: 3;
+        width: 100%;
+        gap: 8px;
+        margin-top: 8px;
+    }
+
+    .menu.aberto {
+        display: flex;
+    }
+
+    .hamburger-topo {
+        display: block;
+        order: 2;
+        margin-left: auto;
+    }
+
+    .container {
+        width: 95%;
+        padding: 16px;
+    }
+
+    .info-box {
+        width: 95%;
+        padding: 16px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .buttons {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+}

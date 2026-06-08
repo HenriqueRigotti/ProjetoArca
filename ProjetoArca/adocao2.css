@@ -1,0 +1,277 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #F9FAFB;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 30px;
+  border-bottom: 2px solid #000;
+  background: #F9FAFB;
+}
+
+.menu {
+  display: flex;
+  gap: 15px;
+}
+
+.menu a {
+  text-decoration: none;
+  background: #EBEBEB;
+  padding: 10px 20px;
+  border-radius: 12px;
+  color: #E60076;
+  font-size: 13px;
+}
+
+.menu-usuario a {
+     text-decoration: none; /* tira sublinhado */
+  color: inherit; /* mantém cor normal */
+}
+
+.menu a.ativo {
+  background: #E60076;
+  color: #fff;
+}
+
+.usuario-area {
+    position: relative;
+}
+
+.user {
+    cursor: pointer;
+    font-size: 22px;
+}
+
+/* MENU SUSPENSO */
+.menu-usuario {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 170px;
+    font-size: 13px;
+    background: #eee;
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: 0.25s;
+}
+
+.menu-usuario.ativo {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* ITENS */
+.item {
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.item:hover {
+    background: #E60076;
+    color: #fff;}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+.user {
+  font-size: 22px;
+}
+
+/* TÍTULO */
+.titulo {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.titulo p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* FILTROS */
+.filtros {
+  width: 700px;
+  margin: 0 auto 30px;
+  padding: 20px;
+  border: 1px solid #999;
+  border-radius: 10px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-end;
+  background: #FFFFFF;
+}
+
+.campo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo input {
+  height: 35px;
+  background: #D9D9D9;
+  border: none;
+}
+
+.limpar {
+  height: 35px;
+  padding: 0 20px;
+  border: 1px solid #000;
+  background: #eee;
+  cursor: pointer;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.card {
+  width: 250px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.card img{
+    width:270px;
+}
+
+.info {
+  padding: 15px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.tags {
+  display: flex;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.tags span {
+  background: #eee;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.card button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #E60076;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* BOTÃO FINAL */
+.agendar {
+  text-align: center;
+  margin: 30px;
+}
+
+.agendar button {
+  background: #E60076;
+  color: #fff;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* =============================================
+   RESPONSIVIDADE MOBILE — NÃO ALTERA DESKTOP
+   ============================================= */
+
+.hamburger-navbar {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding: 10px 14px;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        order: 3;
+        width: 100%;
+        gap: 6px;
+        margin-top: 8px;
+    }
+
+    .menu.aberto {
+        display: flex;
+    }
+
+    .hamburger-navbar {
+        display: block;
+        order: 2;
+        margin-left: auto;
+    }
+
+    .usuario-area {
+        order: 2;
+    }
+
+    .filtros {
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .card img {
+        width: 100%;
+    }
+}

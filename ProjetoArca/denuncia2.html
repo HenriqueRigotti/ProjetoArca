@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<title>Detalhes da Denúncia</title>
+<link rel="stylesheet" href="denuncia2.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <h1 class="logo">
+<a href="index.html">❤️ ARCA</a>
+</h1>
+
+  <nav class="menu">
+    <a href="castracao.html">Castração</a>
+    <a href="adocao.html">Adotar</a>
+    <a href="resgate.html">Resgate</a>
+    <a href="denuncia.html" class="ativo">Denúncia</a>
+  </nav>
+
+  
+  <div class="usuario-area">
+          <div class="user" onclick="toggleMenu()">👤</div>
+
+          <div class="menu-usuario" id="menuUsuario">
+              <a href="login.html"> <div class="item">Entrar</div></a>
+          <a href="contato.html">  <div class="item">Contate-nos</div></a>
+          <a href="agendamento.html">   <div class="item">Agendamentos</div></a>
+          <a href="processo.html">  <div class="item">Processos</div></a>
+          <a href="suporte.html" > <div class="item">Suporte</div></a>
+          </div>
+      </div>
+  </div>
+  <script src="script.js"></script>
+</header>
+
+<main>
+
+  <div class="formulario">
+
+    <div class="titulo-secao">
+      <h3>❗ Detalhes da Denúncia</h3>
+      <p class="sub">Informações sobre o caso de maus-tratos</p>
+    </div>
+
+    <div class="linha-dupla">
+      <div class="campo flex-3">
+        <label>Tipo de Maus-Tratos *</label>
+        <select>
+          <option value="">Selecione</option>
+          <option>Negligência</option>
+          <option>Abandono</option>
+          <option>Agressão</option>
+        </select>
+      </div>
+
+      <div class="campo flex-1">
+        <label>Quantidade de animais</label>
+        <input type="text" placeholder="Ex: 1">
+      </div>
+    </div>
+
+    <div class="campo">
+      <label>Tipo de animal *</label>
+      <select>
+        <option value="">Selecione</option>
+        <option>Cachorro</option>
+        <option>Gato</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label>Frequência das ocorrências *</label>
+      <select>
+        <option value="">Selecione</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3 ou +</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label>Descrição detalhada *</label>
+      <textarea
+        placeholder="Descreva o que você presenciou, quando, como o animal aparenta estar, e qualquer outra informação relevante"></textarea>
+    </div>
+
+    <div class="campo">
+      <label>Evidências (fotos, vídeos)</label>
+      <div class="upload-container">
+        <button class="btn-upload">Escolher arquivos</button>
+        <span class="texto-upload">Nenhum arquivo escolhido</span>
+      </div>
+      <p class="legenda-upload">Evidências visuais fortalecem a denúncia e agilizam a investigação</p>
+    </div>
+
+    <div class="campo-checkbox">
+      <input type="checkbox" id="anonima">
+      <label for="anonima">Denúncia Anônima</label>
+    </div>
+
+    <div class="botoes">
+      <a href="denuncia.html"> <button class="cancelar">Cancelar</button></a>
+      <a href="denuncia3.html"> <button class="enviar">Enviar solicitação</button></a>
+    </div>
+
+  </div>
+
+</main>
+
+</body>
+
+</html>

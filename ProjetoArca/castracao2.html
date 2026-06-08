@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<title>Agendamento</title>
+<link rel="stylesheet" href="castracao2.css">
+</head>
+
+<body>
+
+
+
+<!-- TOPO -->
+<div class="topo">
+      <div class="logo"> 
+      <a href="index.html"> <strong>❤️ ARCA</strong> </a>
+  </div>
+  <div class="menu">
+    <a href="castracao.html"><button class="ativo">Castração</button></a>
+    <a href="adocao.html"> <button>Adotar</button></a>
+    <a href="resgate.html"> <button>Resgate</button></a>
+    <a href="denuncia.html"> <button>Denúncia</button></a>
+  </div>
+
+  <div class="usuario-area">
+          <div class="user" onclick="toggleMenu()">👤</div>
+
+          <div class="menu-usuario" id="menuUsuario">
+             <a href="login.html"> <div class="item">Entrar</div></a>
+          <a href="contato.html">  <div class="item">Contate-nos</div></a>
+          <a href="agendamento.html">   <div class="item">Agendamentos</div></a>
+          <a href="processo.html">  <div class="item">Processos</div></a>
+          <a href="suporte.html" > <div class="item">Suporte</div></a>
+          </div>
+      </div>
+  </div>
+  <script src="script.js"></script>
+
+
+<!-- FORMULÁRIO -->
+<div class="caixa">
+
+  <h2>📅 Preferências de Agendamento</h2>
+  <p class="subtexto">Quando você pode trazer o animal?</p>
+
+  <label>Data preferencial</label>
+  <input type="text" placeholder="00/00/0000" required>
+
+
+  <label>Período preferencial</label>
+  <select id="periodo">
+    <option value="">Selecione</option>
+    <option>Manhã</option>
+    <option>Tarde</option>
+    <option>Noite</option>
+  </select>
+
+  <label>Possui transporte próprio?</label>
+  <select id="transporte">
+    <option value="">Selecione</option>
+    <option>Sim</option>
+    <option>Não</option>
+  </select>
+
+  <label>Observações adicionais</label>
+  <textarea id="obs" placeholder="Alguma informação adicional que devemos saber?"></textarea>
+
+  <div class="termos">
+    <input type="checkbox" >
+    Concordo com os termos e condições do procedimento de castração *
+  </div>
+
+  
+
+</div>
+
+<!-- BOTÕES -->
+<div class="botoes">
+  <a href="castracao.html"> <button class="voltar">Voltar</button> </a>
+  <a href="castracao3.html"><button class="enviar">Enviar solicitação</button></a>
+</div>
+</form>
+
+</body>
+
+</html>

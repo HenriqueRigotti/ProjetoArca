@@ -1,0 +1,227 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #F9FAFB;
+  margin: 0 ;
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+  padding: 15px 30px;
+  background: #F9FAFB;
+  font-size: 25px;
+}
+
+.logo{
+  font-size:32px;
+}
+
+.topo a {
+  text-decoration: none; /* tira sublinhado */
+  color: inherit; /* mantém cor normal */
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #EBEBEB;
+  cursor: pointer;
+  color: #E60076;
+}
+
+.menu .ativo {
+  background: #ff007f;
+  color: white;
+}
+
+.usuario-area {
+    position: relative;
+}
+
+.user {
+    cursor: pointer;
+    font-size: 22px;
+}
+
+/* MENU SUSPENSO */
+.menu-usuario {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 170px;
+    font-size: 13px;
+    background: #eee;
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: 0.25s;
+}
+
+.menu-usuario.ativo {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* ITENS */
+.item {
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.item:hover {
+    background: #E60076;
+    color: #fff;}
+
+
+/* CAIXA PRINCIPAL */
+.container {
+  width: 800px;
+  margin: 40px auto;
+  background: #FFFFFF;
+  border: 2px solid #000;
+  padding: 30px;
+}
+
+.titulocaixa{
+    text-align: center;
+}
+
+/* FORM */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* LINHAS */
+.linha {
+  display: flex;
+  gap: 20px;
+}
+
+/* CAMPOS */
+.campo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* INPUTS E SELECT */
+input,
+select {
+  height: 35px;
+  background: #ccc;
+  border: none;
+  padding: 5px;
+}
+
+/* CHECKBOX */
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* BOTÕES */
+.botoes {
+   max-width: 900px;
+  margin: 20px auto 40px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  
+}
+
+.cancelar {
+  background: #D9D9D9;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.proximo {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* =============================================
+   RESPONSIVIDADE MOBILE — NÃO ALTERA DESKTOP
+   ============================================= */
+
+.hamburger-topo {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .topo {
+        flex-wrap: wrap;
+        padding: 10px 14px;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        order: 3;
+        width: 100%;
+        gap: 8px;
+        margin-top: 8px;
+    }
+
+    .menu.aberto {
+        display: flex;
+    }
+
+    .hamburger-topo {
+        display: block;
+        order: 2;
+        margin-left: auto;
+    }
+
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .linha {
+        flex-direction: column;
+    }
+
+    .botoes {
+        width: 95%;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}

@@ -1,0 +1,105 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #F9FAFB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* CARD DE RECUPERAÇÃO */
+.formulario-recuperacao {
+  width: 550px;
+  background: #ffffff;
+  padding: 40px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave idêntica à imagem */
+}
+
+.topo-recuperacao {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.topo-recuperacao h2 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.topo-recuperacao p {
+  font-size: 15px;
+  color: #666;
+}
+
+/* CAMPOS DE ENTRADA */
+.campo {
+  margin-bottom: 25px;
+}
+
+.formulario-recuperacao label {
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+/* Centralização específica para o segundo rótulo da imagem */
+.centralizado label {
+  text-align: center;
+  line-height: 1.3;
+  margin-top: 10px;
+}
+
+.formulario-recuperacao input {
+  width: 100%;
+  height: 40px;
+  background: #dcdcdc;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  color: #000;
+}
+
+.formulario-recuperacao input::placeholder {
+  color: #777;
+}
+
+/* BOTÕES */
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.voltar {
+  flex: 1;
+  background: #EBEBEB;
+  color: #000;
+  border: 1px solid #999;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  width: 150px;
+}
+
+.continuar {
+  flex: 1;
+  background: #0088FF;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  width: 150px;
+}

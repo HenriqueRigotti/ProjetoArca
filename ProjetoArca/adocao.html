@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projeto Arca</title>
+<link rel="stylesheet" href="adocao.css">
+</head>
+
+<body>
+
+<!-- TOPO -->
+<div class="topo">
+      <div class="logo"> 
+      <a href="index.html"> <strong>❤️ ARCA</strong> </a>
+  </div>
+
+  <div class="menu">
+    <a href="castracao.html"> <button>Castração</button></a>
+    <button class="ativo">Adotar</button>
+    <a href="resgate.html"> <button>Resgate</button></a>
+    <a href="denuncia.html"> <button>Denúncia</button></a>
+  </div>
+
+  
+  <div class="usuario-area">
+          <div class="user" onclick="toggleMenu()">👤</div>
+
+          <div class="menu-usuario" id="menuUsuario">
+              <a href="login.html"> <div class="item">Entrar</div></a>
+          <a href="contato.html">  <div class="item">Contate-nos</div></a>
+          <a href="agendamento.html">   <div class="item">Agendamentos</div></a>
+          <a href="processo.html">  <div class="item">Processos</div></a>
+          <a href="suporte.html" > <div class="item">Suporte</div></a>
+          </div>
+      </div>
+  </div>
+  <script src="script.js"></script>
+
+
+
+<header class="titulocaixa">
+  <h1>Preferências de Adoção</h1>
+  <p>Que tipo de animal você procura?</p>
+</header>
+
+<div class="container">
+
+  <div class="formulario">
+
+    <div class="linha">
+      <div class="campo">
+        <label>Tipo de Animal</label>
+        <select>
+          <option></option>
+          <option>Cachorro</option>
+          <option>Gato</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label>Porte preferido</label>
+        <select>
+          <option></option>
+          <option>Pequeno</option>
+          <option>Médio</option>
+          <option>Grande</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="linha">
+      <div class="campo">
+        <label>Temperamento desejado</label>
+        <select>
+          <option></option>
+          <option>Calmo</option>
+          <option>Agitado</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label>Custo médio mensal ideal</label>
+        <select required>
+          <option></option>
+          <option>100+</option>
+          <option>200+</option>
+          <option>300+</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="campo">
+      <label>Alguma experiência anterior com animais?</label>
+      <input type="text">
+    </div>
+
+    <div class="campo">
+      <label>Qual o motivo da adoção?</label>
+      <input type="text">
+    </div>
+
+    <div class="checkbox">
+      <input type="checkbox" >
+      <span>Concordo com os termos de adoção responsável e me comprometo a cuidar do animal </span>
+    </div>
+  </div>
+</div>
+
+<div class="botoes">
+  <a href="index.html"> <button class="cancelar">Cancelar</button> </a>
+  <a href="adocao2.html"> <button class="proximo">Próximo</button> </a>
+</div>
+
+</div>
+
+</body>
+
+</html>

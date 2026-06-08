@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Meus Processos - ARCA</title>
+  <link rel="stylesheet" href="processo.css">
+</head>
+
+<body>
+
+<div class="topo">
+      <div class="logo"> 
+      <a href="index.html"> <strong>❤️ ARCA</strong> </a>
+  </div>
+
+  <div class="menu">
+    <a href="castracao.html"> <button >Castração</button></a>
+    <a href="adocao.html"> <button>Adotar</button></a>
+    <a href="resgate.html"> <button>Resgate</button></a>
+    <a href="denuncia.html"> <button>Denúncia</button></a>
+  </div>
+
+  
+  <div class="usuario-area">
+          <div class="user" onclick="toggleMenu()">👤</div>
+
+          <div class="menu-usuario" id="menuUsuario">
+              <a href="login.html"> <div class="item">Entrar</div></a>
+          <a href="contato.html">  <div class="item">Contate-nos</div></a>
+          <a href="agendamento.html">   <div class="item">Agendamentos</div></a>
+          <a href="processo.html">  <div class="item">Processos</div></a>
+          <a href="suporte.html" > <div class="item">Suporte</div></a>
+          </div>
+      </div>
+  </div>
+  <script src="script.js"></script>
+
+
+<main>
+
+  <div class="container-processos">
+    
+    <h2>Meus Processos</h2>
+
+    <div class="cabecalho-lista">
+      <span class="col-assunto">Assunto</span>
+      <span class="col-data">Data</span>
+      <span class="col-situacao">Situação</span>
+    </div>
+
+    <div class="card-processo processo-destacado">
+      <div class="col-assunto">
+        <p>Resgate de animal abandonado com filhote na avenida Salgado Fi...</p>
+      </div>
+      <div class="col-data">02/04</div>
+      <div class="col-situacao status-resolvida">Resolvida</div>
+    </div>
+
+    <div class="card-processo">
+      <div class="col-assunto">
+        <p>Denúncia de maus-tratos a um cachorro salsicha preto na avenid...</p>
+      </div>
+      <div class="col-data">23/03</div>
+      <div class="col-situacao status-pendente">Pendente</div>
+    </div>
+
+    <div class="card-processo">
+      <div class="col-assunto">
+        <p>Site travando na aba "Suporte"</p>
+      </div>
+      <div class="col-data">15/02</div>
+      <div class="col-situacao status-resolvida">Resolvida</div>
+    </div>
+
+    <div class="fim-processos">
+      Não há mais processos...
+    </div>
+
+  </div>
+
+</main>
+
+</body>
+</html>

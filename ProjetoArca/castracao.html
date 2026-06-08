@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="castracao.css">
+</head>
+
+<body>
+
+<!-- TOPO -->
+<div class="topo">
+<div class="logo"> 
+<a href="index.html"> <strong>❤️ ARCA</strong> </a>
+</div>
+
+<div class="menu">
+    <button class="ativo">Castração</button>
+    <a href="adocao.html"> <button>Adotar</button></a>
+    <a href="resgate.html"><button>Resgate</button></a>
+    <a href="denuncia.html"> <button>Denúncia</button></a>
+</div>
+
+<div class="usuario-area">
+    <div class="user" onclick="toggleMenu()">👤</div>
+
+    <div class="menu-usuario" id="menuUsuario">
+        <a href="login.html"> <div class="item">Entrar</div></a>
+          <a href="contato.html">  <div class="item">Contate-nos</div></a>
+          <a href="agendamento.html">   <div class="item">Agendamentos</div></a>
+          <a href="processo.html">  <div class="item">Processos</div></a>
+          <a href="suporte.html" > <div class="item">Suporte</div></a>
+    </div>
+</div>
+</div>
+<script src="script.js"></script>
+
+<body>
+
+<header>
+    <div class="icon">📅</div>
+    <h1>Agendamento de Castração</h1>
+    <p>Agende a castração do seu animal de forma gratuita ou com desconto</p>
+</header>
+
+
+<div class="info-box">
+    <strong>Por que castrar?</strong>
+    <ul>
+        <li>Previne doenças graves como câncer e infecções</li>
+        <li>Evita procriação descontrolada e abandono</li>
+        <li>Diminui comportamentos agressivos e fugas</li>
+        <li>Aumenta a expectativa de vida do animal</li>
+    </ul>
+</div>
+
+<div class="container">
+
+
+    <section class="form-section">
+        <h2>🐾 Dados do Animal</h2>
+        <p>Informações sobre seu pet</p>
+
+        <div class="form-grid">
+            <div>
+                <label>Nome do animal *</label>
+                <input type="text" placeholder="Nome do seu pet">
+            </div>
+
+            <div>
+                <label>Espécie *</label>
+                <select>
+                    <option>Selecione</option>
+                    <option>Cachorro</option>
+                    <option>Gato</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Sexo *</label>
+                <select required>
+                    <option>Selecione</option>
+                    <option>Macho</option>
+                    <option>Fêmea</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Idade aproximada *</label>
+                <input type="text" placeholder="Ex: 2 anos" >
+            </div>
+
+            <div>
+                <label>Peso aproximado (kg) *</label>
+                <input type="number" placeholder="Ex: 10" >
+            </div>
+        </div>
+
+        <div class="full">
+            <label>Raça/Porte</label>
+            <input type="text" placeholder="Ex: vira-lata, médio porte">
+        </div>
+
+        <div class="full">
+            <label>Condições de saúde</label>
+            <textarea placeholder="O animal possui algum problema de saúde?"></textarea>
+        </div>
+
+        <div class="checkbox-group">
+            <label><input type="checkbox"> Animal vacinado</label>
+            <label><input type="checkbox"> Animal vermifugado recentemente</label>
+        </div>
+
+        <div class="buttons">
+            <a href="index.html"> <button class="cancelar">Cancelar</button> </a>
+            <a href="castracao2.html"><button class="proximo">Próximo</button></a>
+        </div>
+
+    </section>
+</div>
+
+</body>
+
+
+
+</html>

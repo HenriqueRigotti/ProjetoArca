@@ -1,0 +1,221 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #F9FAFB;
+}
+
+/* TOPO */
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 30px;
+  border-bottom: 2px solid black;
+  background: #F9FAFB;
+  font-size: 25px;
+}
+
+.logo{
+    font-size: 32px;
+}
+
+.topo a {
+  text-decoration: none; /* tira sublinhado */
+  color: inherit; /* mantém cor normal */
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-usuario a {
+     text-decoration: none; /* tira sublinhado */
+  color: inherit; /* mantém cor normal */
+}
+
+.menu button {
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
+  background: #EBEBEB;
+  cursor: pointer;
+  color: #E60076;
+}
+
+.menu .ativo {
+  background: #E60076;
+  color: white;
+}
+
+.usuario-area {
+    position: relative;
+}
+
+.user {
+    cursor: pointer;
+    font-size: 22px;
+}
+
+/* MENU SUSPENSO */
+.menu-usuario {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 170px;
+    font-size: 13px;
+    background: #eee;
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: 0.25s;
+}
+
+.menu-usuario.ativo {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* ITENS */
+.item {
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.item:hover {
+    background: #E60076;
+    color: #fff;}
+
+
+/* FUNDO */
+.fundo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+}
+
+/* MODAL */
+.modal {
+  background: white;
+  padding: 40px;
+  width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ÍCONE */
+.icone {
+  font-size: 40px;
+  color:#08AF16;
+  border: 2px solid green;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* TEXTO */
+.modal p {
+  margin: 10px 0;
+}
+
+/* BOTÃO NOVA */
+.novoagendamento {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 1px solid black;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+/* CHECK */
+.termos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.termos input {
+  width: auto;
+}
+
+/* BOTÃO OK */
+.ok {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: #0088FF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* =============================================
+   RESPONSIVIDADE MOBILE — NÃO ALTERA DESKTOP
+   ============================================= */
+
+.hamburger-topo {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .topo {
+        flex-wrap: wrap;
+        padding: 10px 14px;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        order: 3;
+        width: 100%;
+        gap: 8px;
+        margin-top: 8px;
+    }
+
+    .menu.aberto {
+        display: flex;
+    }
+
+    .hamburger-topo {
+        display: block;
+        order: 2;
+        margin-left: auto;
+    }
+
+    .fundo {
+        height: auto;
+        padding: 30px 16px;
+        align-items: flex-start;
+    }
+
+    .modal {
+        width: 95%;
+        padding: 24px 16px;
+    }
+}
